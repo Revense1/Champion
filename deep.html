@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с зелеными кнопками</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-button {
+            background: linear-gradient(to bottom, #2ecc71, #27ae60);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 120px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(to bottom, #27ae60, #219653);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 50px;
+            color: #ecf0f1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background: rgba(46, 204, 113, 0.1);
+            border: 2px solid rgba(46, 204, 113, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(46, 204, 113, 0.2);
+            border-color: rgba(46, 204, 113, 0.6);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #2ecc71;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2ecc71;
+        }
+        
+        .feature-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ecf0f1;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #bdc3c7;
+            border-top: 1px solid rgba(46, 204, 113, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .button-group {
+                gap: 10px;
+            }
+            
+            .nav-button {
+                padding: 12px 20px;
+                font-size: 16px;
+                min-width: 90px;
+            }
+            
+            .title {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-button {
+                width: 80%;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="button-group">
+                <button class="nav-button">Buy</button>
+                <button class="nav-button">Order</button>
+                <button class="nav-button">Hui</button>
+                <button class="nav-button">Nik</button>
+                <button class="nav-button">Zel</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="content">
+        <h1 class="title">Добро пожаловать на сайт с Красными кнопками</h1>
+        <p class="subtitle">Это демонстрационная страница с пятью зелеными кнопками в верхней части экрана. Нажмите на любую кнопку для получения информации (в демо-версии функционал не реализован).</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Buy</h3>
+                <p class="feature-text">Кнопка "Buy" предназначена для быстрого оформления покупки выбранных товаров и услуг.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">Order</h3>
+                <p class="feature-text">Кнопка "Order" позволяет сделать заказ на доставку товаров в удобное для вас время.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3 class="feature-title">Инновации</h3>
+                <p class="feature-text">Наши уникальные решения помогают клиентам достигать поставленных целей эффективно.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2023 Сайт с зелеными кнопками. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Добавляем обработчики событий для кнопок
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Анимация нажатия
+                this.style.transform = 'scale(0.95)';
+                
+                // Восстановление размера после анимации
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+                
+                // Создаем эффект пульсации
+                const pulse = document.createElement('div');
+                pulse.style.position = 'absolute';
+                pulse.style.borderRadius = '50px';
+                pulse.style.backgroundColor = 'rgba(46, 204, 113, 0.3)';
+                pulse.style.width = this.offsetWidth + 'px';
+                pulse.style.height = this.offsetHeight + 'px';
+                pulse.style.left = this.getBoundingClientRect().left + 'px';
+                pulse.style.top = this.getBoundingClientRect().top + 'px';
+                pulse.style.zIndex = '999';
+                pulse.style.pointerEvents = 'none';
+                pulse.style.transform = 'scale(1)';
+                pulse.style.transition = 'transform 0.5s, opacity 0.5s';
+                pulse.style.opacity = '1';
+                
+                document.body.appendChild(pulse);
+                
+                // Анимация пульсации
+                setTimeout(() => {
+                    pulse.style.transform = 'scale(1.2)';
+                    pulse.style.opacity = '0';
+                }, 10);
+                
+                // Удаление элемента после анимации
+                setTimeout(() => {
+                    document.body.removeChild(pulse);
+                }, 600);
+                
+                // Показываем информацию о кнопке
+                alert(`Вы нажали кнопку: ${this.textContent}\n\nВ демо-версии функционал кнопок не реализован.`);
+            });
+        });
+    </script>
+</body>
+</html>
